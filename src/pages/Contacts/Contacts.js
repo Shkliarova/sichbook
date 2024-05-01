@@ -2,7 +2,7 @@ import { selectContacts, selectError, selectIsLoading } from "../../redux/contac
 import { ContactForm } from "../../components/ContactForm/ContactForm"
 import { ContactList } from "../../components/ContactList/ContactList"
 import { Filter } from "../../components/Filter/Filter"
-import { AppWrapper } from "./Contacts.styled"
+import { AppWrapper, MainTitle } from "./Contacts.styled"
 import { useSelector, useDispatch } from "react-redux"
 import { useEffect } from "react";
 import { fetchContacts } from "../../redux/contacts/operations"
@@ -19,7 +19,7 @@ export default function Contacts() {
 
     return(
       <AppWrapper>
-        <h1>Телефонна книга</h1>
+        <MainTitle>Телефонна книга</MainTitle>
         <ContactForm />
         <h2>Контакти</h2>
         <Filter />

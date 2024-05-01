@@ -9,3 +9,6 @@ box-shadow: 5px 5px 10px #1976d2;
 padding: 15px;
 width: 700px;
 margin: 5% auto;`
+
+export const MainTitle = styled.h1`
+margin-bottom: 8px`

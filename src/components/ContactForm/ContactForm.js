@@ -1,6 +1,6 @@
 import {Formik} from "formik"
 import * as Yup from 'yup';
-import { ContactsForm, ContactsField, FormError } from "./ContactForm.styled";
+import { ContactsForm, ContactsField} from "./ContactForm.styled";
 import { useDispatch, useSelector } from "react-redux"
 import { addContacts } from "../../redux/contacts/operations";
 import { Button } from "@mui/material";
@@ -9,7 +9,7 @@ import { selectContacts } from "../../redux/contacts/selectors";
 const contactSchema = Yup.object().shape({
     name: Yup.string().required("Обов'язково"),
     number: Yup.string()
-    .matches(/^\d{3}-\d{2}-\d{2}-\d{3}$/g, 'Потрібний формат: xxx-xx-xx-xxx')
+    .matches(/^\d{3}-\d{2}-\d{2}-\d{3}$/g, 'Приклад: xxx-xx-xx-xxx')
     .required("Обов'язково")
 })
 
@@ -37,14 +37,14 @@ export const ContactForm = () => {
             actions.resetForm();
         }
         }}>
-            <ContactsForm>
-                <div style={{display: "flex", gap: "8px"}}>
+        <ContactsForm>
+            <div style={{display: "flex", gap: "8px"}}>
                 <ContactsField type="text" name="name" required />
                 <ContactsField type="tel" name="number" placeholder="xxx-xx-xx-xxx" required/>
-                <Button variant="contained" type="submit" style={{marginLeft: "auto"}}>Додати контакт</Button>
-                </div>
-                <FormError name="number" component="span"/>
-            </ContactsForm>
+                    {/* <FormError name="number" component="span"/> */}
+                <Button variant="contained" type="submit" style={{marginLeft: "auto", height: "35px"}}>Додати контакт</Button>
+            </div>
+        </ContactsForm>
         </Formik>
     )
 }
