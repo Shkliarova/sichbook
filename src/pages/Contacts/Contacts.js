@@ -19,11 +19,11 @@ export default function Contacts() {
 
     return(
       <AppWrapper>
-        <h1>Phonebook</h1>
+        <h1>Телефонна книга</h1>
         <ContactForm />
-        <h2>Contacts</h2>
+        <h2>Контакти</h2>
         <Filter />
-        {isLoading && !error && <b>Request in progress...</b>}
+        {isLoading && !error && <b>Виконується запит...</b>}
         {contacts.length > 0 && <ContactList />}
       </AppWrapper>
     )

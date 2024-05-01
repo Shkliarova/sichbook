@@ -28,7 +28,7 @@ export const LoginForm = () => {
     margin: "12% auto"}}>
       <TextField id="standard-basic" label="Email" variant="standard" type="email" name="email"/>
       <TextField id="standard-basic" label="Password" variant="standard" type="password" name="password"/>
-      <Button variant="contained" type="submit" style={{marginTop: "24px"}}>Log In</Button>
+      <Button variant="contained" type="submit" style={{marginTop: "24px"}}>Вхід</Button>
     </form>
   );
 };

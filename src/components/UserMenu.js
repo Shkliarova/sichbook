@@ -9,8 +9,8 @@ export const UserMenu = () => {
 
   return (
     <div style={{display: "flex", marginLeft: "auto", gap: "8px"}}>
-      <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>Welcome, {user.name}</Typography>
-      <Button variant="outlined" color='inherit' type="button" onClick={() => dispatch(logOut())}>Logout</Button>
+      <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>Привіт, {user.name}</Typography>
+      <Button variant="outlined" color='inherit' type="button" onClick={() => dispatch(logOut())}>Вийти</Button>
     </div>
   );
 };

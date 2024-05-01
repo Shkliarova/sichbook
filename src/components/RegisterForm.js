@@ -30,7 +30,7 @@ export const RegisterForm = () => {
       <TextField id="standard-basic" label="Username" variant="standard" type="text" name="name"/>
       <TextField id="standard-basic" label="Email" variant="standard" type="email" name="email"/>
       <TextField id="standard-basic" label="Password" variant="standard" type="password" name="password"/>
-      <Button variant="contained" type="submit" style={{marginTop: "24px"}}>Register</Button>
+      <Button variant="contained" type="submit" style={{marginTop: "24px"}}>Реєстрація</Button>
     </form>
   );
 };

@@ -22,8 +22,8 @@ export const App = () => {
   }, [dispatch]);
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      {isRefreshing ? <b>Refreshing user...</b> : (
+    <Suspense fallback={<div>Завантаження...</div>}>
+      {isRefreshing ? <b>Оновлення користувача...</b> : (
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />

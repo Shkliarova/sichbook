@@ -7,10 +7,10 @@ import { Button } from "@mui/material";
 import { selectContacts } from "../../redux/contacts/selectors";
 
 const contactSchema = Yup.object().shape({
-    name: Yup.string().required('Required'),
+    name: Yup.string().required("Обов'язково"),
     number: Yup.string()
-    .matches(/^\d{3}-\d{2}-\d{2}$/g, 'Number format: xxx-xx-xx')
-    .required('Required')
+    .matches(/^\d{3}-\d{2}-\d{2}-\d{3}$/g, 'Потрібний формат: xxx-xx-xx-xxx')
+    .required("Обов'язково")
 })
 
 export const ContactForm = () => {
@@ -30,7 +30,7 @@ export const ContactForm = () => {
         );
 
         if (isDuplicate) {
-          alert('This contact is already in your phonebook!');
+          alert('Цей контакт вже є у вашій контактній книзі!');
           actions.resetForm();
         } else{
             dispatch(addContacts(values));
@@ -40,8 +40,8 @@ export const ContactForm = () => {
             <ContactsForm>
                 <div style={{display: "flex", gap: "8px"}}>
                 <ContactsField type="text" name="name" required />
-                <ContactsField type="tel" name="number" placeholder="xxx-xx-xx" required/>
-                <Button variant="contained" type="submit" style={{marginLeft: "auto"}}>Add contact </Button>
+                <ContactsField type="tel" name="number" placeholder="xxx-xx-xx-xxx" required/>
+                <Button variant="contained" type="submit" style={{marginLeft: "auto"}}>Додати контакт</Button>
                 </div>
                 <FormError name="number" component="span"/>
             </ContactsForm>

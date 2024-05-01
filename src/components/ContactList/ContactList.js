@@ -14,7 +14,7 @@ export const ContactList = () => {
             <li key={item.id} style={{fontSize: "large"}}>
                 {item.name}: <i>{item.number}</i>
                 <Button variant="contained" size="small" onClick={()=>dispatch(deleteContact(item.id))}
-                style={{marginLeft: "16px"}}>delete</Button>
+                style={{marginLeft: "16px"}}>видалити</Button>
             </li>)}
         </ContactsList>
     )

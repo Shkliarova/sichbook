@@ -5,10 +5,10 @@ export const AuthNav = () => {
   return (
     <div style={{marginLeft: 'auto'}}>
       <NavLink to="/register">
-        <Button variant="outlined" color='inherit'>Register</Button>
+        <Button variant="outlined" color='inherit'>Реєстрація</Button>
       </NavLink>
       <NavLink to="/login">
-        <Button variant="outlined" color='inherit' style={{marginLeft: '8px'}}>Log In</Button>
+        <Button variant="outlined" color='inherit' style={{marginLeft: '8px'}}>Вхід</Button>
       </NavLink>
     </div>
   );

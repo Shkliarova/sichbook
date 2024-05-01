@@ -8,11 +8,11 @@ export const Navigation = () => {
   return (
     <nav>
       <NavLink to="/">
-        <Button variant='text' color='inherit'>Home</Button>
+        <Button variant='text' color='inherit'>Головна</Button>
       </NavLink>
       {isLoggedIn && (
         <NavLink to="/contacts">
-          <Button variant='text' color='inherit'>Contacts</Button>
+          <Button variant='text' color='inherit'>Контакти</Button>
         </NavLink>
       )}
     </nav>

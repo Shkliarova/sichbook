@@ -9,7 +9,7 @@ export const Filter = () => {
 
     return(
         <div>
-            <TextField id="standard-basic" label="Enter the name of the contact" variant="standard" type="text" value={filter} 
+            <TextField id="standard-basic" label="Введіть ім'я студента" variant="standard" type="text" value={filter} 
             onChange={e => dispatch(updateFilter(e.target.value))} style={{width: "600px"}}/>
         </div>
     )

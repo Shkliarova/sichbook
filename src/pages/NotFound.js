@@ -4,9 +4,9 @@ import { Button } from "@mui/material"
 export default function NotFound() {
     return (
         <p style={{textAlign: "center", marginTop: "20%", fontSize:"x-large"}}>
-            You must be lost! Please use this <Button href="#text-buttons" style={{fontSize: "large"}}>
-            <Link to="/">link</Link>
-        </Button> to navigate to home page.
+            Мабуть, ви заблукали! Будь ласка, перейдіть за цим <Button href="#text-buttons" style={{fontSize: "large"}}>
+            <Link to="/">посиланням</Link>
+        </Button> щоб перейти на Головну.
         </p>
     )
 }
