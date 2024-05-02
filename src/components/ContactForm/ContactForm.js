@@ -1,6 +1,6 @@
 import {Formik} from "formik"
 import * as Yup from 'yup';
-import { ContactsForm, ContactsField} from "./ContactForm.styled";
+import { ContactsForm, ContactsField, ContactsFormWrap} from "./ContactForm.styled";
 import { useDispatch, useSelector } from "react-redux"
 import { addContacts } from "../../redux/contacts/operations";
 import { Button } from "@mui/material";
@@ -38,12 +38,12 @@ export const ContactForm = () => {
         }
         }}>
         <ContactsForm>
-            <div style={{display: "flex", gap: "8px"}}>
+            <ContactsFormWrap>
                 <ContactsField type="text" name="name" required />
                 <ContactsField type="tel" name="number" placeholder="xxx-xx-xx-xxx" required/>
                     {/* <FormError name="number" component="span"/> */}
                 <Button variant="contained" type="submit" style={{marginLeft: "auto", height: "35px"}}>Додати контакт</Button>
-            </div>
+            </ContactsFormWrap>
         </ContactsForm>
         </Formik>
     )

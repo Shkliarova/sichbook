@@ -6,6 +6,10 @@ display: flex;
 gap: 4px;
 flex-direction: column;`
 
+export const ContactsFormWrap = styled.div`
+display: flex;
+gap: 8px;`
+
 export const ContactsField = styled(Field)`
 border-color: #1976d2;
 opacity: 50%;
