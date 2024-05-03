@@ -21,9 +21,9 @@ export const RegisterForm = () => {
 
   return (
     <RegForm onSubmit={handleSubmit} autoComplete="off">
-      <TextField id="standard-basic" label="Username" variant="standard" type="text" name="name"/>
-      <TextField id="standard-basic" label="Email" variant="standard" type="email" name="email"/>
-      <TextField id="standard-basic" label="Password" variant="standard" type="password" name="password"/>
+      <TextField id="standard-basic" label="Ім'я користувача" variant="standard" type="text" name="name"/>
+      <TextField id="standard-basic" label="Імейл" variant="standard" type="email" name="email"/>
+      <TextField id="standard-basic" label="Пароль" variant="standard" type="password" name="password"/>
       <Button variant="contained" type="submit" style={{marginTop: "24px"}}>Реєстрація</Button>
     </RegForm>
   );

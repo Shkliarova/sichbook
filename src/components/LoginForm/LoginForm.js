@@ -20,8 +20,8 @@ export const LoginForm = () => {
 
   return (
     <LoginFormSt onSubmit={handleSubmit} autoComplete="off">
-      <TextField id="standard-basic" label="Email" variant="standard" type="email" name="email"/>
-      <TextField id="standard-basic" label="Password" variant="standard" type="password" name="password"/>
+      <TextField id="standard-basic" label="Імейл" variant="standard" type="email" name="email"/>
+      <TextField id="standard-basic" label="Пароль" variant="standard" type="password" name="password"/>
       <Button variant="contained" type="submit" style={{marginTop: "24px"}}>Вхід</Button>
     </LoginFormSt>
   );

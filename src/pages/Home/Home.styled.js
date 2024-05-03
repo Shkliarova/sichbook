@@ -6,4 +6,6 @@ margin-top: 15%;`
 
 export const HomeText = styled.p`
 font-size: larger;
-margin-top: 12px;`
+margin: 0 auto;
+margin-top: 12px;
+max-width: 700px;`

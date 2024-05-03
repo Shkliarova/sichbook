@@ -8,8 +8,8 @@ import { refreshUser } from '../redux/auth/operations';
 import { useAuth } from '../hooks/useAuth';
 
 const HomePage = lazy(() => import('../pages/Home/Home'));
-const RegisterPage = lazy(() => import('../pages/Register'));
-const LoginPage = lazy(() => import('../pages/Login'));
+const RegisterPage = lazy(() => import('../pages/Register/Register'));
+const LoginPage = lazy(() => import('../pages/Login/Login'));
 const ContactsPage = lazy(() => import('../pages/Contacts/Contacts'));
 const NotFoundPage = lazy(() => import('../pages/NotFound/NotFound'))
 
