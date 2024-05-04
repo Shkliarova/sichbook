@@ -10,7 +10,7 @@ export const UserMenu = () => {
 
   return (
     <UserMenuWrap>
-      <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>Привіт, {user.name}</Typography>
+      <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>Привіт, {user.name}👋</Typography>
       <Button style={{marginLeft: "12px"}} variant="outlined" color='inherit' type="button" onClick={() => dispatch(logOut())}>Вийти</Button>
     </UserMenuWrap>
   );

@@ -8,4 +8,8 @@ text-align: center;
 margin-top: 16px;`
 
 export const LinkToSignIn = styled(Link)`
-text-decoration: underline;`
+text-decoration: underline;
+
+&:hover {
+    color: black;
+}`

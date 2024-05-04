@@ -19,7 +19,7 @@ export default function Contacts() {
 
     return(
       <AppWrapper>
-        <MainTitle>Телефонна книга</MainTitle>
+        <MainTitle>Довідник контактів</MainTitle>
         <ContactForm />
         <h2>Контакти</h2>
         <Filter />

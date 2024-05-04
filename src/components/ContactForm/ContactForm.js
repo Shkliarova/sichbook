@@ -39,7 +39,7 @@ export const ContactForm = () => {
         }}>
         <ContactsForm>
             <ContactsFormWrap>
-                <ContactsField type="text" name="name" required />
+                <ContactsField type="text" name="name" placeholder="Ім'я студента" required />
                 <ContactsField type="tel" name="number" placeholder="xxx-xx-xx-xxx" required/>
                     {/* <FormError name="number" component="span"/> */}
                 <Button variant="contained" type="submit" style={{marginLeft: "auto", height: "35px"}}>Додати контакт</Button>
