@@ -1,9 +1,8 @@
-import {Formik} from "formik"
+import { Formik } from "formik";
 import * as Yup from 'yup';
-import { ContactsForm, ContactsField, ContactsFormWrap} from "./ContactForm.styled";
-import { useDispatch, useSelector } from "react-redux"
+import { ContactsForm, ContactsField, ContactsFormWrap, FormBtn, FieldWrap, FormLabel, ContactField } from "./ContactForm.styled";
+import { useDispatch, useSelector } from "react-redux";
 import { addContacts } from "../../redux/contacts/operations";
-import { Button } from "@mui/material";
 import { selectContacts } from "../../redux/contacts/selectors";
 
 const contactSchema = Yup.object().shape({
@@ -37,14 +36,29 @@ export const ContactForm = () => {
             actions.resetForm();
         }
         }}>
-        <ContactsForm>
-            <ContactsFormWrap>
-                <ContactsField type="text" name="name" placeholder="Ім'я студента" required />
-                <ContactsField type="tel" name="number" placeholder="xxx-xx-xx-xxx" required/>
-                    {/* <FormError name="number" component="span"/> */}
-                <Button variant="contained" type="submit" style={{marginLeft: "auto", height: "35px"}}>Додати контакт</Button>
-            </ContactsFormWrap>
-        </ContactsForm>
+        {({ values, handleChange, handleBlur }) => (
+            <ContactsForm>
+                <ContactsFormWrap>
+                    <FieldWrap>
+                        <FormLabel htmlFor="name">Ім'я студента:</FormLabel>
+                        <ContactsField type="text" name="name" required />
+                    </FieldWrap>
+                    <FieldWrap>
+                        <FormLabel htmlFor="number">Телефон:</FormLabel>
+                        <ContactField 
+                            mask="999-99-99-999" 
+                            maskChar="_"
+                            value={values.number}
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            name="number"
+                            required
+                        />
+                    </FieldWrap>
+                    <FormBtn variant="contained" type="submit" style={{marginLeft: "auto"}}>Додати контакт</FormBtn>
+                </ContactsFormWrap>
+            </ContactsForm>
+        )}
         </Formik>
     )
 }
