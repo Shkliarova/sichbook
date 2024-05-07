@@ -8,8 +8,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  // <React.StrictMode>
-  <>
+  <React.StrictMode>
     <PersistGate loading={null} persistor={persistor}>
       <Provider store={store}>
       <BrowserRouter basename="/sichbook">
@@ -18,6 +17,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       </Provider>
     </PersistGate>
     <GlobalStyle/>
-    </>
-  // </React.StrictMode>
+  </React.StrictMode>
 );

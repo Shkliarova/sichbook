@@ -6,6 +6,7 @@ import { PrivateRoute } from '../components/PrivateRoute';
 import { RestrictedRoute } from '../components/RestrictedRoute';
 import { refreshUser } from '../redux/auth/operations';
 import { useAuth } from '../hooks/useAuth';
+import { Loader } from './Loader/Loader';
 
 const HomePage = lazy(() => import('../pages/Home/Home'));
 const RegisterPage = lazy(() => import('../pages/Register/Register'));
@@ -23,7 +24,7 @@ export const App = () => {
 
   return (
     <Suspense fallback={<div>Завантаження...</div>}>
-      {isRefreshing ? <b>Оновлення користувача...</b> : (
+      {isRefreshing ? <Loader/> : (
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
