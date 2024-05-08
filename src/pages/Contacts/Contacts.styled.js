@@ -12,4 +12,15 @@ margin: 5% auto;
 background-color: white;`
 
 export const MainTitle = styled.h1`
-margin-bottom: 8px`
+margin-bottom: 8px;`
+
+export const MainTitleWrap = styled.div`
+display: flex;
+gap: 12px;
+align-items: center;`
+
+export const ContactTitle = styled.div`
+display: flex;
+gap: 12px;
+align-items: center;
+margin-top: 12px;`

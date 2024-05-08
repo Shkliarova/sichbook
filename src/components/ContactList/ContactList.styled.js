@@ -11,7 +11,11 @@ export const ContactsListItem = styled.li`
 font-size: large;
 display: flex;
 align-items: baseline;
-justify-content: space-between;`
+gap: 16px;`
 
 export const DeleteBtn = styled(Button)`
-`
+margin-left: auto !important;
+
+&:hover {
+    background-color: #d32f2f !important;
+}`

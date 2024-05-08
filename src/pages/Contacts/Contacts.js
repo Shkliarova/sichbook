@@ -2,10 +2,12 @@ import { selectContacts, selectError, selectIsLoading } from "../../redux/contac
 import { ContactForm } from "../../components/ContactForm/ContactForm"
 import { ContactList } from "../../components/ContactList/ContactList"
 import { Filter } from "../../components/Filter/Filter"
-import { AppWrapper, MainTitle } from "./Contacts.styled"
+import { AppWrapper, MainTitle, MainTitleWrap, ContactTitle } from "./Contacts.styled"
 import { useSelector, useDispatch } from "react-redux"
 import { useEffect } from "react";
 import { fetchContacts } from "../../redux/contacts/operations"
+import ContactPhoneIcon from '@mui/icons-material/ContactPhoneOutlined';
+import RingVolumeIcon from '@mui/icons-material/RingVolume';
 
 export default function Contacts() {
   const contacts = useSelector(selectContacts);
@@ -19,9 +21,15 @@ export default function Contacts() {
 
     return(
       <AppWrapper>
+        <MainTitleWrap>
+        <ContactPhoneIcon sx={{fontSize: 44}} color="primary"/>
         <MainTitle>Довідник контактів</MainTitle>
+        </MainTitleWrap>
         <ContactForm />
-        <h2>Контакти</h2>
+        <ContactTitle>
+          <h2>Контакти</h2>
+          <RingVolumeIcon color="primary"/>
+        </ContactTitle>
         <Filter />
         {isLoading && !error && <b>Виконується запит...</b>}
         {contacts.length > 0 && <ContactList />}
