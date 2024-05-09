@@ -2,7 +2,7 @@ import { selectContacts, selectError, selectIsLoading } from "../../redux/contac
 import { ContactForm } from "../../components/ContactForm/ContactForm"
 import { ContactList } from "../../components/ContactList/ContactList"
 import { Filter } from "../../components/Filter/Filter"
-import { AppWrapper, MainTitle, MainTitleWrap, ContactTitle } from "./Contacts.styled"
+import { AppWrapper, MainTitle, MainTitleWrap, ContactTitle, ContactLoader } from "./Contacts.styled"
 import { useSelector, useDispatch } from "react-redux"
 import { useEffect } from "react";
 import { fetchContacts } from "../../redux/contacts/operations"
@@ -31,7 +31,7 @@ export default function Contacts() {
           <RingVolumeIcon color="primary"/>
         </ContactTitle>
         <Filter />
-        {isLoading && !error && <b>Виконується запит...</b>}
+        {isLoading && !error && <ContactLoader/>}
         {contacts.length > 0 && <ContactList />}
       </AppWrapper>
     )

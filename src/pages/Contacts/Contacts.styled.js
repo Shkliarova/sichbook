@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { CircularProgress } from "@mui/material"
 
 export const AppWrapper = styled.div`
 display: flex;
@@ -24,3 +25,7 @@ display: flex;
 gap: 12px;
 align-items: center;
 margin-top: 12px;`
+
+export const ContactLoader = styled(CircularProgress)`
+display: block;
+margin: 0 auto;`
