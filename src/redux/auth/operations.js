@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { toast } from 'react-hot-toast';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
 axios.defaults.baseURL = "https://connections-api.herokuapp.com";
@@ -19,6 +20,11 @@ export const register = createAsyncThunk(
       setAuthHeader(res.data.token);
       return res.data;
     } catch (error) {
+      if (error.response && error.response.status === 409) {
+        toast.error('Цей імейл вже зареєстровано!');
+      } else {
+        toast.error('Невірний формат даних або користувач вже є в системі!');
+      }
       return thunkAPI.rejectWithValue(error.message);
     }
   }
@@ -32,6 +38,7 @@ export const logIn = createAsyncThunk(
       setAuthHeader(res.data.token);
       return res.data;
     } catch (error) {
+      toast.error("Неправильний імейл або пароль!");
       return thunkAPI.rejectWithValue(error.message);
     }
   }
@@ -42,6 +49,7 @@ export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
     await axios.post('/users/logout');
     clearAuthHeader();
   } catch (error) {
+    toast.error("Щось пішло не так!");
     return thunkAPI.rejectWithValue(error.message);
   }
 });

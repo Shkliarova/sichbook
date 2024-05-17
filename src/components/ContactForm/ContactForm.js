@@ -1,5 +1,6 @@
 import { Formik } from "formik";
 import * as Yup from 'yup';
+import toast from "react-hot-toast";
 import { ContactsForm, ContactsField, ContactsFormWrap, FormBtn, FieldWrap, FormLabel, ContactField, AddContact } from "./ContactForm.styled";
 import { useDispatch, useSelector } from "react-redux";
 import { addContacts } from "../../redux/contacts/operations";
@@ -29,8 +30,8 @@ export const ContactForm = () => {
         );
 
         if (isDuplicate) {
-          alert('Цей контакт вже є у вашій контактній книзі!');
-          actions.resetForm();
+            toast.error('Цей контакт вже є у вашій контактній книзі!');
+            actions.resetForm();
         } else{
             dispatch(addContacts(values));
             actions.resetForm();
