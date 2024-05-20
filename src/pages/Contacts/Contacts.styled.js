@@ -3,22 +3,45 @@ import { CircularProgress } from "@mui/material"
 
 export const AppWrapper = styled.div`
 display: flex;
-gap: 8px;
+gap: 4px;
 flex-direction: column;
 border: 1px solid #1976d2;
 box-shadow: 5px 5px 10px #1976d2;
 padding: 15px;
-width: 700px;
-margin: 5% auto;
-background-color: white;`
+width: calc(100% - 60px);
+background-color: white;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+
+@media screen and (min-width: 375px) {
+  max-width: 500px;
+  }
+
+@media screen and (min-width: 740px) {
+  max-width: 700px;
+  gap: 8px;
+  }
+`
 
 export const MainTitle = styled.h1`
-margin-bottom: 8px;`
+margin-bottom: 4px;
+font-size: 22px;
+
+@media screen and (min-width: 740px) {
+    margin-bottom: 8px;
+    font-size: 32px;
+  }`
 
 export const MainTitleWrap = styled.div`
 display: flex;
-gap: 12px;
-align-items: center;`
+gap: 8px;
+align-items: center;
+
+@media screen and (min-width: 740px) {
+    gap: 12px;
+  }`
 
 export const ContactTitle = styled.div`
 display: flex;

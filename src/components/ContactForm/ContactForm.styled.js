@@ -11,30 +11,49 @@ flex-direction: column;`
 
 export const FormBtn = styled(Button)`
 height: 35px;
-margin-left: auto !important;`
+
+@media screen and (min-width: 740px) {
+    margin-left: auto !important;
+  }
+`
 
 export const ContactsFormWrap = styled.div`
 display: flex;
 gap: 8px;
-align-items: flex-end;`
+flex-direction: column;
+
+@media screen and (min-width: 740px) {
+    align-items: flex-end;
+    flex-direction: row;
+  }`
 
 export const ContactsField = styled(Field)`
 border-color: #1976d2;
 opacity: 50%;
-width: 230px;
+width: 100%;
 height: 35px;
-font-size: 18px;
+font-size: 16px;
 text-indent: 8px;
-border-radius: 5px;`
+border-radius: 5px;
+
+@media screen and (min-width: 740px) {
+    width: 230px;
+    font-size: 18px;
+  }`
 
 export const ContactField = styled(InputMask)`
 border-color: #1976d2;
 opacity: 50%;
-width: 230px;
+width: 100%;
 height: 35px;
-font-size: 18px;
+font-size: 16px;
 text-indent: 8px;
-border-radius: 5px;`
+border-radius: 5px;
+
+@media screen and (min-width: 740px) {
+    width: 230px;
+    font-size: 18px;
+  }`
 
 export const FieldWrap = styled.div`
 display: flex;

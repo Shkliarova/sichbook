@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
-import { Appbar } from '../AppBar';
+import { Appbar } from '../AppBar/AppBar';
 import { Suspense } from 'react';
 import { LayoutWrap } from './Layout.styled';
 
