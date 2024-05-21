@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { register } from '../../redux/auth/operations';
-import { TextField, Button } from '@mui/material';
-import { RegForm } from './RegisterForm.styled';
+import { Button } from '@mui/material';
+import { RegForm, RegisterField } from './RegisterForm.styled';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -21,9 +21,9 @@ export const RegisterForm = () => {
 
   return (
     <RegForm onSubmit={handleSubmit} autoComplete="off">
-      <TextField id="standard-basic" label="Ім'я користувача" variant="standard" type="text" name="name"/>
-      <TextField id="standard-basic" label="Імейл" variant="standard" type="email" name="email"/>
-      <TextField id="standard-basic" label="Пароль" variant="standard" type="password" name="password"/>
+      <RegisterField id="standard-basic" label="Ім'я користувача" variant="standard" type="text" name="name"/>
+      <RegisterField id="standard-basic" label="Імейл" variant="standard" type="email" name="email"/>
+      <RegisterField id="standard-basic" label="Пароль" variant="standard" type="password" name="password"/>
       <Button variant="contained" type="submit" style={{marginTop: "24px"}}>Реєстрація</Button>
     </RegForm>
   );
