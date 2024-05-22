@@ -10,10 +10,11 @@ box-shadow: 5px 5px 10px #1976d2;
 padding: 15px;
 width: calc(100% - 60px);
 background-color: white;
-position: absolute;
+/* position: absolute;
 left: 50%;
 top: 50%;
-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%); */
+margin: 50px auto;
 
 @media screen and (min-width: 375px) {
   max-width: 500px;
@@ -22,6 +23,7 @@ transform: translate(-50%, -50%);
 @media screen and (min-width: 740px) {
   max-width: 700px;
   gap: 8px;
+  margin: 100px auto;
   }
 `
 
