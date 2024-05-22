@@ -1,4 +1,4 @@
-import { Navigation } from '../Navigation';
+import { Navigation } from '../Navigation/Navigation';
 import { UserMenu } from '../UserMenu/UserMenu';
 import { AuthNav } from '../AuthNav';
 import { useAuth } from '../../hooks/useAuth';

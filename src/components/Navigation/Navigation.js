@@ -1,7 +1,8 @@
 import { NavLink } from 'react-router-dom';
-import { useAuth } from '../hooks/useAuth';
+import { useAuth } from '../../hooks/useAuth';
 import { Button } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
+import { NavBtn } from './Navigation.styled';
 
 export const Navigation = () => {
   const { isLoggedIn } = useAuth();
@@ -15,7 +16,7 @@ export const Navigation = () => {
       </NavLink>
       {isLoggedIn && (
         <NavLink to="/contacts">
-          <Button variant='text' color='inherit'>Контакти</Button>
+          <NavBtn variant='text' color='inherit'>Контакти</NavBtn>
         </NavLink>
       )}
     </nav>
