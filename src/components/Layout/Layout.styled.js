@@ -6,7 +6,7 @@ export const LayoutWrap = styled.div`
     max-width: 375px; */
     height: 100vh;
     background: 
-        linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
+        linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), 
         url(${backgroundImage});
     background-size: cover;
     background-position: center;
