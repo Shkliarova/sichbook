@@ -1,9 +1,9 @@
-import { HomeWrap, HomeText } from "./Home.styled";
+import { HomeWrap, HomeText, HomeTitle } from "./Home.styled";
 
 export default function Home() {
     return (
       <HomeWrap>
-        <h1>Ласкаво просимо у довідник контактів!</h1>
+        <HomeTitle>Ласкаво просимо у довідник контактів!</HomeTitle>
         <HomeText>Щоб отримати доступ до контактної книги, зареєструйтеся або увійдіть до вже наявного облікового запису.</HomeText>
       </HomeWrap>
     );
