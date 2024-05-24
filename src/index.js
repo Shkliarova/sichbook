@@ -11,7 +11,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <PersistGate loading={null} persistor={persistor}>
       <Provider store={store}>
-      <HashRouter basename="/sichbook">
+      <HashRouter>
         <App />
       </HashRouter>
       </Provider>
