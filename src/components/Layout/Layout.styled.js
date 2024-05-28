@@ -2,23 +2,16 @@ import styled from "styled-components";
 import backgroundImage from '../../assets/images/phonebook-background.jpg';
 
 export const LayoutWrap = styled.div`
-    /* width: 100%;
-    max-width: 375px; */
-    height: 100vh;
+  padding: 0 0 50px 0;
+  box-sizing: border-box;
+
+    min-height: 100vh;
     background: 
         linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), 
         url(${backgroundImage});
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    background-color: #dfeff5; 
-    position: relative;
+    background-repeat: repeat;
+    background-color: #dfeff5;
     margin: 0 auto;
-
-    @media screen and (min-width: 740px) {
-    /* max-width: 740px; */
-  }
-
-    @media screen and (min-width: 1440px) {
-    /* max-width: 1440px; */
-  }`
+`
