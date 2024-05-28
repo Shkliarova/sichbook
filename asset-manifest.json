@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/sichbook/static/css/main.7cda0caf.css",
-    "main.js": "/sichbook/static/js/main.524f6a78.js",
+    "main.js": "/sichbook/static/js/main.28e4e7f6.js",
     "static/js/363.e12080d5.chunk.js": "/sichbook/static/js/363.e12080d5.chunk.js",
     "static/js/269.fb4f09fe.chunk.js": "/sichbook/static/js/269.fb4f09fe.chunk.js",
     "static/js/374.089f1f9c.chunk.js": "/sichbook/static/js/374.089f1f9c.chunk.js",
@@ -14,7 +14,7 @@
     "static/media/icons.svg": "/sichbook/static/media/icons.30c4a100358a1c773e3326422c64e383.svg",
     "index.html": "/sichbook/index.html",
     "main.7cda0caf.css.map": "/sichbook/static/css/main.7cda0caf.css.map",
-    "main.524f6a78.js.map": "/sichbook/static/js/main.524f6a78.js.map",
+    "main.28e4e7f6.js.map": "/sichbook/static/js/main.28e4e7f6.js.map",
     "363.e12080d5.chunk.js.map": "/sichbook/static/js/363.e12080d5.chunk.js.map",
     "269.fb4f09fe.chunk.js.map": "/sichbook/static/js/269.fb4f09fe.chunk.js.map",
     "374.089f1f9c.chunk.js.map": "/sichbook/static/js/374.089f1f9c.chunk.js.map",
@@ -26,6 +26,6 @@
   },
   "entrypoints": [
     "static/css/main.7cda0caf.css",
-    "static/js/main.524f6a78.js"
+    "static/js/main.28e4e7f6.js"
   ]
 }
