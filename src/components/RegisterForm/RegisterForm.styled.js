@@ -13,7 +13,7 @@ margin: 0 auto;
 background-color: white;
 
 @media screen and (min-width: 530px) {
-    width: 500px;
+    max-width: 700px;
     }
 `
 

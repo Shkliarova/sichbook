@@ -2,7 +2,7 @@ import styled from "styled-components";
 import backgroundImage from '../../assets/images/phonebook-background.jpg';
 
 export const LayoutWrap = styled.div`
-  padding: 0 0 50px 0;
+  padding: 0 0 10px 0;
   box-sizing: border-box;
 
     min-height: 100vh;

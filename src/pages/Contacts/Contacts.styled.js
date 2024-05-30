@@ -17,7 +17,7 @@ margin: 50px auto;
   }
 
 @media screen and (min-width: 740px) {
-  max-width: 700px;
+  max-width: 800px;
   gap: 8px;
   margin: 100px auto;
   }
